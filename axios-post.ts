@@ -1,7 +1,6 @@
 import { Endpoints } from './endpoints';
 import RequestService from './request-service';
 
-
 type User = { id: number, name: string }
 
 async function postUser(params: User) {
@@ -13,7 +12,7 @@ async function getUserById(id: number) {
   const user = await RequestService.get<User>(url as Endpoints);
 
   console.log("++++++++ GET USER ++++++++")
-  console.log(user[0])
+  console.log("Axios response", user[0])
   console.log("++++++++ GET USER ++++++++")
 }
 
