@@ -1,5 +1,7 @@
-import { getTokenFromCode } from "sucrase/dist/parser/tokenizer";
+export const refreshToken = () => {
+  console.log('token refreshed')
+}
 
-export default () => {
+export const getToken = () => {
   return 'token'
 }
