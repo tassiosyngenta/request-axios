@@ -1,13 +1,19 @@
 import axios from 'axios';
+import getToken from './fake-get-token';
 
 const instance = axios.create({
   baseURL: 'http://localhost:3000/',
   timeout: 2000,
+  headers: {
+    'Authorization': getToken()
+  }
 });
 
-
 instance.interceptors.request.use(
-  config => config,
+  config => {
+   console.log("Axios Request", config)
+   return config
+  },
   error => Promise.reject(error)
 )
 
