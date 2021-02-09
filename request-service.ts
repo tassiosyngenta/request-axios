@@ -1,9 +1,9 @@
-import * as Endpoints from './endpoints';
+import { Endpoints } from './endpoints';
 import axios from './axios';
-import {AxiosRequestConfig, AxiosResponse} from 'axios';
+import { AxiosResponse } from 'axios';
 
 function requestService() {
-  async function get<T, D = {}>(endpoint: Endpoints.Endpoints, data?: D): Promise<AxiosResponse<T>> {
+  async function get<T, D = {}>(endpoint: Endpoints, data?: D): Promise<AxiosResponse<T>> {
     try {
       return await axios.get<T>(endpoint)
     } catch (e) {
@@ -11,7 +11,7 @@ function requestService() {
     }
   }
 
-  async function post<T, D = {}>(endpoint: Endpoints.Endpoints, data?: D): Promise<AxiosResponse<T>> {
+  async function post<T, D = {}>(endpoint: Endpoints, data?: D): Promise<AxiosResponse<T>> {
     try {
       return await axios.post<T>(endpoint, data)
     } catch(e) {
