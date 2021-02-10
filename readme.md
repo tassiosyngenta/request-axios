@@ -30,7 +30,7 @@ This file have a controll of the endpoints:
 
 This files show a exemple the use service https get and post:
 
-- [get](./axios.get)
+- [get](./axios-get.ts)
 - [post](./axios-post.ts)
 
 </p>
