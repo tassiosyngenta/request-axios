@@ -6,6 +6,7 @@ const instance = axios.create({
   timeout: 2000,
   headers: {
     'Authorization': TokenService.getToken()
+    /* Others header properties */ 
   }
 });
 

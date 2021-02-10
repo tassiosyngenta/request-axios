@@ -5,6 +5,7 @@ type User = { id: number, name: string }
 
 async function getUsers() {
   const users = await RequestService.get<User[]>(Endpoints.requestUsers);
+  
   console.log("Axios response", users);
   console.table(users);
 }
